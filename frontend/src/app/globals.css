@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-imperial: #C8102E;
+  --color-imperial-dark: #990000;
+  --color-imperial-light: #FFF0F2;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F8FAFC;
+  color: #0F172A;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8102E;
+}
+
+/* Custom Imperial Red Glass Card */
+.imperial-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 16, 46, 0.12);
+  box-shadow: 0 10px 30px -10px rgba(200, 16, 46, 0.08);
+}
+
+.imperial-gradient-bg {
+  background: linear-gradient(135deg, #7A0016 0%, #C8102E 50%, #990000 100%);
+}
+
+.imperial-gradient-text {
+  background: linear-gradient(135deg, #990000 0%, #C8102E 50%, #E31B23 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Micro interaction glow */
+.imperial-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.imperial-glow:hover {
+  box-shadow: 0 10px 25px -5px rgba(200, 16, 46, 0.35);
+  transform: translateY(-2px);
+}
